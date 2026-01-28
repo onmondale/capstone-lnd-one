@@ -12,21 +12,21 @@ const FishNavigation = dynamicImport(
   () => import("../components/FishNavigation"),
   {
     ssr: false,
-  }
+  },
 );
 
 const ThemeToggle = dynamicImport(
   () => import("../components/ThemeToggle").then((mod) => mod.ThemeToggle),
   {
     ssr: false,
-  }
+  },
 );
 
 const TimeIcon = dynamicImport(
   () => import("../components/TimeIcon").then((mod) => mod.TimeIcon),
   {
     ssr: false,
-  }
+  },
 );
 
 const Popup = dynamicImport(() => import("../components/Popup"), {
@@ -37,7 +37,7 @@ const MobileOverlay = dynamicImport(
   () => import("../components/MobileOverlay"),
   {
     ssr: false,
-  }
+  },
 );
 
 // Force dynamic rendering to prevent SSR issues with window/document access
@@ -174,7 +174,7 @@ const HomePage = () => {
                 className="w-[100%] h-[10%] flex items-center justify-between navigation-box"
               >
                 <p className="text-sm pl-8">Literature Review</p>
-                <p className="text-sm pr-8 text-right">-&gt;</p>
+                <p className="text-sm pr-8 text-right">→</p>
               </Link>
             </div>
             <div className="w-[76%] container-box overflow-hidden">

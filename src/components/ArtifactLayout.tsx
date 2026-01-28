@@ -58,7 +58,7 @@ const ArtifactLayout: React.FC<ArtifactLayoutProps> = ({
             href={"/"}
             className="text-nav font-bold flex items-center justify-center p-4 border-b border-alt"
           >
-            &lt;- Return Home
+            ← Return Home
           </Link>
           <h2 className="text-2xl italic pt-6 px-6">Artifact Collection:</h2>
           <h1 className="text-3xl font-bold pb-3 pt-1 px-6">{title}</h1>
@@ -82,7 +82,7 @@ const ArtifactLayout: React.FC<ArtifactLayoutProps> = ({
               }`}
             >
               {artifact}
-              <p className="text-sm pr-8 text-right">-&gt;</p>
+              <p className="text-sm pr-8 text-right">→</p>
             </Link>
           ))}
           <div className="w-1/2 flex flex-col items-start ml-4 pt-8">

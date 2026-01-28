@@ -48,13 +48,13 @@ const LiteratureReview: React.FC = () => {
 
   const debouncedUpdateActiveSection = useMemo(
     () => debounce(updateActiveSection, 50),
-    [updateActiveSection]
+    [updateActiveSection],
   );
 
   const scrollToSection = useCallback((sectionNumber: number) => {
     if (typeof window === "undefined" || !containerRef.current) return;
     const element = containerRef.current.querySelector(
-      `#section-${sectionNumber}`
+      `#section-${sectionNumber}`,
     );
     if (element) {
       const rect = element.getBoundingClientRect();
@@ -84,7 +84,7 @@ const LiteratureReview: React.FC = () => {
 
   const bookHeights = useMemo(
     () => booksContent.map(() => Math.floor(Math.random() * 50) + 100),
-    []
+    [],
   );
 
   if (!isClient) {
@@ -103,7 +103,7 @@ const LiteratureReview: React.FC = () => {
             href="/"
             className="text-nav font-bold flex items-center justify-center p-4 border-b border-alt"
           >
-            &lt;- Return Home
+            ← Return Home
           </Link>
           <div className="flex flex-col p-6 pl-8">
             <div className="flex justify-between items-end">

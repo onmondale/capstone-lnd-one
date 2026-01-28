@@ -44,13 +44,13 @@ const AboutPage: React.FC = () => {
 
   const debouncedUpdateActiveSection = useMemo(
     () => debounce(updateActiveSection, 50),
-    [updateActiveSection]
+    [updateActiveSection],
   );
 
   const scrollToSection = useCallback((sectionNumber: number) => {
     if (typeof window === "undefined" || !containerRef.current) return;
     const element = containerRef.current.querySelector(
-      `#section-${sectionNumber}`
+      `#section-${sectionNumber}`,
     );
     if (element) {
       const rect = element.getBoundingClientRect();
@@ -94,7 +94,7 @@ const AboutPage: React.FC = () => {
             href="/"
             className="text-nav font-bold flex items-center justify-center p-4 border-b border-alt"
           >
-            &lt;- Return Home
+            ← Return Home
           </Link>
           <div className="flex flex-col p-6 pl-8 pt-4 h-full">
             <div className="grid grid-rows-2 gap-4 w-full  bg-main border border-alt rounded-xl p-6">
